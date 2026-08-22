@@ -68,8 +68,7 @@ function tinhTongHaiChuSo() {
   var hangDonVi = soHaiChuSo % 10;
   var tongHaiChuSo = hangChuc + hangDonVi;
 
-  document.getElementById("txtKetQuaBai5").innerHTML =
-    "Tổng hai chữ số: " + tongHaiChuSo;
+  document.getElementById("txtKetQuaBai5").innerHTML = "Tổng hai chữ số: " + tongHaiChuSo;
 }
 
 // Nút trở về đầu trang
