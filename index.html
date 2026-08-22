@@ -3,99 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Giao diện thực hành JavaScript cơ bản gồm năm bài tập." />
+    <meta name="description" content="Bài tập JavaScript cơ bản gồm năm bài tính toán." />
     <title>Bài tập JavaScript cơ bản</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">JAVASCRIPT FUNDAMENTALS</p>
-        <h1 id="page-title">5 bài tập JavaScript</h1>
-        <p class="hero-description">Nhập dữ liệu, nhấn nút tính và xem kết quả ngay bên dưới mỗi bài tập.</p>
-      </section>
+    <!-- Header -->
+    <section class="header">
+      <div class="container">
+        <div class="header__content">
+          <h1>Bài tập JavaScript Buổi 2 - 3</h1>
+          <span>Nhập dữ liệu theo yêu cầu và nhấn nút để xem kết quả.</span>
+        </div>
+      </div>
+    </section>
 
-      <section class="exercise-grid" aria-label="Danh sách bài tập">
-        <article class="exercise-card">
-          <div class="card-heading">
-            <span class="exercise-number">01</span>
-            <div><p class="card-label">BÀI TẬP 1</p><h2>Tính tiền lương nhân viên</h2></div>
-          </div>
-          <p class="question">Một ngày làm việc có lương <strong>100.000 VNĐ</strong>. Hãy tính tổng lương theo số ngày làm.</p>
+    <!-- Bài tập 1 -->
+    <section class="baiTap baiTap1">
+      <div class="container">
+        <div class="baiTap__content">
+          <h2><span>01</span> Tính tiền lương nhân viên</h2>
+          <p class="yeuCau">Nhập số ngày làm việc của nhân viên. Biết lương một ngày là <b>100.000 VNĐ</b>.</p>
           <label for="txtSoNgayLam">Số ngày làm việc</label>
-          <div class="input-with-suffix">
-            <input id="txtSoNgayLam" type="number" min="0" step="1" placeholder="Ví dụ: 26" />
+          <div class="oNhapCoDonVi">
+            <input id="txtSoNgayLam" type="number" min="0" step="1" placeholder="Nhập số ngày làm" />
             <span>ngày</span>
           </div>
-          <button id="btnTinhLuong" type="button">Tính tiền lương <span>→</span></button>
-          <p id="txtKetQuaBai1" class="result-bar" aria-live="polite">Kết quả sẽ hiển thị tại đây</p>
-        </article>
+          <button id="btnTinhLuong" type="button">Tính tiền lương</button>
+          <p id="txtKetQuaBai1" class="ketQua" aria-live="polite">Kết quả:</p>
+        </div>
+      </div>
+    </section>
 
-        <article class="exercise-card">
-          <div class="card-heading">
-            <span class="exercise-number">02</span>
-            <div><p class="card-label">BÀI TẬP 2</p><h2>Tính giá trị trung bình</h2></div>
+    <!-- Bài tập 2 -->
+    <section class="baiTap baiTap2">
+      <div class="container">
+        <div class="baiTap__content">
+          <h2><span>02</span> Tính giá trị trung bình</h2>
+          <p class="yeuCau">Nhập lần lượt 5 số thực. Tính giá trị trung bình của 5 số vừa nhập.</p>
+          <div class="danhSachSo">
+            <label for="txtNum1">Số thứ nhất<input id="txtNum1" type="number" step="any" placeholder="Nhập số" /></label>
+            <label for="txtNum2">Số thứ hai<input id="txtNum2" type="number" step="any" placeholder="Nhập số" /></label>
+            <label for="txtNum3">Số thứ ba<input id="txtNum3" type="number" step="any" placeholder="Nhập số" /></label>
+            <label for="txtNum4">Số thứ tư<input id="txtNum4" type="number" step="any" placeholder="Nhập số" /></label>
+            <label for="txtNum5">Số thứ năm<input id="txtNum5" type="number" step="any" placeholder="Nhập số" /></label>
           </div>
-          <p class="question">Nhập 5 số thực và tính giá trị trung bình của chúng.</p>
-          <div class="input-grid five-inputs">
-            <label for="txtNum1">Số thứ 1<input id="txtNum1" type="number" step="any" placeholder="0" /></label>
-            <label for="txtNum2">Số thứ 2<input id="txtNum2" type="number" step="any" placeholder="0" /></label>
-            <label for="txtNum3">Số thứ 3<input id="txtNum3" type="number" step="any" placeholder="0" /></label>
-            <label for="txtNum4">Số thứ 4<input id="txtNum4" type="number" step="any" placeholder="0" /></label>
-            <label for="txtNum5">Số thứ 5<input id="txtNum5" type="number" step="any" placeholder="0" /></label>
-          </div>
-          <button id="btnTinhTrungBinh" type="button">Tính trung bình <span>→</span></button>
-          <p id="txtKetQuaBai2" class="result-bar" aria-live="polite">Kết quả sẽ hiển thị tại đây</p>
-        </article>
+          <button id="btnTinhTrungBinh" type="button">Tính trung bình</button>
+          <p id="txtKetQuaBai2" class="ketQua" aria-live="polite">Kết quả:</p>
+        </div>
+      </div>
+    </section>
 
-        <article class="exercise-card">
-          <div class="card-heading">
-            <span class="exercise-number">03</span>
-            <div><p class="card-label">BÀI TẬP 3</p><h2>Quy đổi tiền tệ</h2></div>
-          </div>
-          <p class="question">Quy đổi tiền USD sang VNĐ với tỷ giá cố định <strong>1 USD = 23.500 VNĐ</strong>.</p>
-          <label for="txtSoTienUSD">Số tiền cần đổi</label>
-          <div class="input-with-suffix">
-            <input id="txtSoTienUSD" type="number" min="0" step="any" placeholder="Ví dụ: 100" />
+    <!-- Bài tập 3 -->
+    <section class="baiTap baiTap3">
+      <div class="container">
+        <div class="baiTap__content">
+          <h2><span>03</span> Quy đổi USD sang VNĐ</h2>
+          <p class="yeuCau">Nhập số tiền USD cần quy đổi. Tỷ giá áp dụng: <b>1 USD = 23.500 VNĐ</b>.</p>
+          <label for="txtSoTienUSD">Số tiền USD</label>
+          <div class="oNhapCoDonVi">
+            <input id="txtSoTienUSD" type="number" min="0" step="any" placeholder="Nhập số tiền USD" />
             <span>USD</span>
           </div>
-          <button id="btnQuyDoi" type="button">Quy đổi sang VNĐ <span>→</span></button>
-          <p id="txtKetQuaBai3" class="result-bar" aria-live="polite">Kết quả sẽ hiển thị tại đây</p>
-        </article>
+          <button id="btnQuyDoi" type="button">Quy đổi sang VNĐ</button>
+          <p id="txtKetQuaBai3" class="ketQua" aria-live="polite">Kết quả:</p>
+        </div>
+      </div>
+    </section>
 
-        <article class="exercise-card">
-          <div class="card-heading">
-            <span class="exercise-number">04</span>
-            <div><p class="card-label">BÀI TẬP 4</p><h2>Tính chu vi &amp; diện tích</h2></div>
+    <!-- Bài tập 4 -->
+    <section class="baiTap baiTap4">
+      <div class="container">
+        <div class="baiTap__content">
+          <h2><span>04</span> Tính chu vi và diện tích hình chữ nhật</h2>
+          <p class="yeuCau">Nhập chiều dài và chiều rộng của hình chữ nhật, sau đó tính diện tích và chu vi.</p>
+          <div class="danhSachSo danhSachSoHCN">
+            <label for="txtChieuDai">Chiều dài<input id="txtChieuDai" type="number" min="0" step="any" placeholder="Nhập chiều dài" /></label>
+            <label for="txtChieuRong">Chiều rộng<input id="txtChieuRong" type="number" min="0" step="any" placeholder="Nhập chiều rộng" /></label>
           </div>
-          <p class="question">Tính chu vi và diện tích của một hình chữ nhật.</p>
-          <div class="input-grid two-inputs">
-            <label for="txtChieuDai">Chiều dài<input id="txtChieuDai" type="number" min="0" step="any" placeholder="Ví dụ: 12" /></label>
-            <label for="txtChieuRong">Chiều rộng<input id="txtChieuRong" type="number" min="0" step="any" placeholder="Ví dụ: 8" /></label>
-          </div>
-          <button id="btnTinhHCN" type="button">Tính kết quả <span>→</span></button>
-          <p id="txtKetQuaBai4" class="result-bar" aria-live="polite">Kết quả sẽ hiển thị tại đây</p>
-        </article>
+          <button id="btnTinhHCN" type="button">Tính kết quả</button>
+          <p id="txtKetQuaBai4" class="ketQua" aria-live="polite">Kết quả:</p>
+        </div>
+      </div>
+    </section>
 
-        <article class="exercise-card exercise-card-wide">
-          <div class="card-heading">
-            <span class="exercise-number">05</span>
-            <div><p class="card-label">BÀI TẬP 5</p><h2>Tính tổng 2 ký số</h2></div>
-          </div>
-          <p class="question">Nhập một số có hai chữ số, sau đó tính tổng chữ số hàng chục và hàng đơn vị.</p>
-          <label for="txtSoHaiChuSo">Số có 2 chữ số</label>
-          <div class="input-with-suffix">
-            <input id="txtSoHaiChuSo" type="number" min="10" max="99" step="1" placeholder="Ví dụ: 57" />
+    <!-- Bài tập 5 -->
+    <section class="baiTap baiTap5">
+      <div class="container">
+        <div class="baiTap__content">
+          <h2><span>05</span> Tính tổng hai chữ số</h2>
+          <p class="yeuCau">Nhập một số nguyên có hai chữ số. Tính tổng của chữ số hàng chục và chữ số hàng đơn vị.</p>
+          <label for="txtSoHaiChuSo">Số nguyên có hai chữ số</label>
+          <div class="oNhapCoDonVi">
+            <input id="txtSoHaiChuSo" type="number" min="10" max="99" step="1" placeholder="Nhập số từ 10 đến 99" />
             <span>10–99</span>
           </div>
-          <button id="btnTinhTongKySo" type="button">Tính tổng ký số <span>→</span></button>
-          <p id="txtKetQuaBai5" class="result-bar" aria-live="polite">Kết quả sẽ hiển thị tại đây</p>
-        </article>
-      </section>
-    </main>
+          <button id="btnTinhTongKySo" type="button">Tính tổng chữ số</button>
+          <p id="txtKetQuaBai5" class="ketQua" aria-live="polite">Kết quả:</p>
+        </div>
+      </div>
+    </section>
 
     <script src="./js/main.js"></script>
   </body>

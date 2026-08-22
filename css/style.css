@@ -1,65 +1,226 @@
-:root {
-  --ink: #172339;
-  --muted: #637085;
-  --primary: #5b46e5;
-  --primary-dark: #4634c7;
-  --surface: #ffffff;
-  --result: #effcf7;
-  --result-ink: #13785d;
+/* Cài đặt chung */
+* {
+  box-sizing: border-box;
 }
-
-* { box-sizing: border-box; }
 
 body {
-  min-width: 320px;
   margin: 0;
-  color: var(--ink);
-  font-family: "Be Vietnam Pro", Arial, sans-serif;
-  background: radial-gradient(circle at 8% 4%, #e5e2ff 0, transparent 26rem), radial-gradient(circle at 95% 15%, #d9f7f0 0, transparent 22rem), #f7f8fc;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background-color: #f3f4f6;
 }
 
-.page-shell { width: min(1160px, calc(100% - 40px)); padding: 74px 0 88px; margin: 0 auto; }
-.hero { max-width: 630px; margin-bottom: 42px; }
-.eyebrow, .card-label { margin: 0; color: var(--primary); font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
-h1, h2 { margin: 0; line-height: 1.18; }
-h1 { margin-top: 9px; font-size: clamp(2rem, 5vw, 3.45rem); letter-spacing: -.055em; }
-.hero-description { margin: 17px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.65; }
-
-.exercise-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-.exercise-card { display: flex; flex-direction: column; padding: 28px; border: 1px solid rgba(225, 229, 239, .95); border-radius: 20px; background: rgba(255, 255, 255, .92); box-shadow: 0 18px 42px rgba(47, 56, 83, .07); }
-.exercise-card-wide { grid-column: 1 / -1; max-width: calc(50% - 11px); }
-.card-heading { display: flex; gap: 14px; align-items: center; }
-.exercise-number { display: grid; flex: 0 0 auto; width: 45px; height: 45px; place-items: center; border-radius: 13px; color: var(--primary); font-weight: 800; background: #efedff; }
-h2 { margin-top: 4px; font-size: 1.1rem; letter-spacing: -.025em; }
-.question { min-height: 51px; margin: 22px 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
-.question strong { color: #39445b; font-weight: 700; }
-
-label { display: block; color: #4c5870; font-size: .78rem; font-weight: 700; }
-input { width: 100%; height: 45px; margin-top: 8px; padding: 0 12px; border: 1px solid #dbe0eb; border-radius: 10px; outline: none; color: var(--ink); font: inherit; font-size: .9rem; background: #fff; transition: border-color .2s, box-shadow .2s; }
-input::placeholder { color: #a5adbd; }
-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(91, 70, 229, .13); }
-.input-with-suffix { position: relative; }
-.input-with-suffix input { padding-right: 78px; }
-.input-with-suffix span { position: absolute; top: 50%; right: 13px; color: #747f92; font-size: .78rem; font-weight: 700; transform: translateY(-14%); }
-.input-grid { display: grid; gap: 12px; }
-.five-inputs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.two-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-button { display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 47px; padding: 0 17px; margin-top: 22px; border: 0; border-radius: 10px; cursor: pointer; color: #fff; font: inherit; font-size: .86rem; font-weight: 700; background: var(--primary); box-shadow: 0 8px 17px rgba(91, 70, 229, .19); transition: background .2s, transform .2s; }
-button:hover { background: var(--primary-dark); transform: translateY(-2px); }
-button span { font-size: 1.2rem; }
-.result-bar { min-height: 47px; padding: 14px 15px; margin: 12px 0 0; border-left: 3px solid #6addb8; border-radius: 8px; color: var(--result-ink); font-size: .84rem; font-weight: 600; line-height: 1.45; background: var(--result); }
-
-@media (max-width: 760px) {
-  .page-shell { width: min(100% - 28px, 560px); padding: 46px 0 60px; }
-  .hero { margin-bottom: 29px; }
-  .exercise-grid { grid-template-columns: 1fr; gap: 16px; }
-  .exercise-card-wide { grid-column: auto; max-width: none; }
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-@media (max-width: 460px) {
-  .exercise-card { padding: 22px 18px; border-radius: 16px; }
-  .five-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .two-inputs { grid-template-columns: 1fr; }
-  .question { min-height: auto; }
+/* Header */
+.header {
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+  background-color: #5b46e5;
+}
+
+.header .header__content p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.header .header__content h1 {
+  margin: 0 0 15px;
+  font-size: 42px;
+}
+
+.header .header__content span {
+  font-size: 19px;
+}
+
+/* Phần chung của các bài tập */
+.baiTap {
+  padding-top: 25px;
+}
+
+.baiTap .baiTap__content {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.baiTap h2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  color: #29344d;
+  font-size: 26px;
+}
+
+.baiTap h2 span {
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #5b46e5;
+  font-size: 18px;
+  background-color: #eeecff;
+}
+
+.baiTap .yeuCau {
+  margin: 22px 0;
+  color: #58657b;
+  line-height: 1.6;
+}
+
+.baiTap label {
+  display: block;
+  color: #374151;
+  font-weight: bold;
+}
+
+.baiTap input {
+  width: 100%;
+  height: 50px;
+  padding: 0 14px;
+  margin-top: 8px;
+  border: 1px solid #cfd5df;
+  border-radius: 8px;
+  outline: none;
+  font-size: 17px;
+}
+
+.baiTap input:focus {
+  border-color: #5b46e5;
+}
+
+.baiTap button {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 18px;
+  margin-top: 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #5b46e5;
+}
+
+.baiTap button:hover {
+  background-color: #4634c7;
+}
+
+.baiTap .ketQua {
+  min-height: 54px;
+  padding: 15px;
+  margin: 14px 0 0;
+  border-left: 4px solid #31b989;
+  border-radius: 6px;
+  color: #167253;
+  font-weight: bold;
+  background-color: #eafaf4;
+}
+
+/* Bài tập 1 */
+.baiTap1 .oNhapCoDonVi {
+  position: relative;
+}
+
+.baiTap1 .oNhapCoDonVi span {
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  color: #667085;
+}
+
+/* Bài tập 2 */
+.baiTap2 .danhSachSo {
+  display: flex;
+  gap: 12px;
+}
+
+.baiTap2 .danhSachSo label {
+  width: 20%;
+}
+
+/* Bài tập 3 */
+.baiTap3 .oNhapCoDonVi {
+  position: relative;
+}
+
+.baiTap3 .oNhapCoDonVi span {
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  color: #667085;
+}
+
+/* Bài tập 4 */
+.baiTap4 .danhSachSoHCN {
+  display: flex;
+  gap: 18px;
+}
+
+.baiTap4 .danhSachSoHCN label {
+  width: 50%;
+}
+
+/* Bài tập 5 */
+.baiTap5 {
+  padding-bottom: 60px;
+}
+
+.baiTap5 .oNhapCoDonVi {
+  position: relative;
+}
+
+.baiTap5 .oNhapCoDonVi span {
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  color: #667085;
+}
+
+/* Màn hình điện thoại */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .header {
+    padding: 42px 0;
+  }
+
+  .header .header__content h1 {
+    font-size: 30px;
+  }
+
+  .header .header__content span {
+    font-size: 16px;
+  }
+
+  .baiTap .baiTap__content {
+    padding: 22px 18px;
+  }
+
+  .baiTap h2 {
+    font-size: 21px;
+  }
+
+  .baiTap2 .danhSachSo,
+  .baiTap4 .danhSachSoHCN {
+    display: block;
+  }
+
+  .baiTap2 .danhSachSo label,
+  .baiTap4 .danhSachSoHCN label {
+    width: 100%;
+    margin-top: 14px;
+  }
 }
