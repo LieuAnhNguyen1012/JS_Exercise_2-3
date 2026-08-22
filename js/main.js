@@ -71,3 +71,11 @@ function tinhTongHaiChuSo() {
   document.getElementById("txtKetQuaBai5").innerHTML =
     "Tổng hai chữ số: " + tongHaiChuSo;
 }
+
+// Nút trở về đầu trang
+document.getElementById("btnBackToTop").onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};

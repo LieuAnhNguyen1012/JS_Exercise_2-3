@@ -98,6 +98,24 @@ body {
   border-color: #5b46e5;
 }
 
+/* Ô nhập có đơn vị đi kèm */
+.baiTap .oNhapCoDonVi {
+  position: relative;
+  margin-top: 8px;
+}
+
+.baiTap .oNhapCoDonVi input {
+  padding-right: 80px;
+  margin-top: 0;
+}
+
+.baiTap .oNhapCoDonVi span {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  color: #667085;
+}
+
 .baiTap button {
   width: 100%;
   min-height: 52px;
@@ -127,18 +145,6 @@ body {
   background-color: #eafaf4;
 }
 
-/* Bài tập 1 */
-.baiTap1 .oNhapCoDonVi {
-  position: relative;
-}
-
-.baiTap1 .oNhapCoDonVi span {
-  position: absolute;
-  top: 40px;
-  right: 16px;
-  color: #667085;
-}
-
 /* Bài tập 2 */
 .baiTap2 .danhSachSo {
   display: flex;
@@ -147,18 +153,6 @@ body {
 
 .baiTap2 .danhSachSo label {
   width: 20%;
-}
-
-/* Bài tập 3 */
-.baiTap3 .oNhapCoDonVi {
-  position: relative;
-}
-
-.baiTap3 .oNhapCoDonVi span {
-  position: absolute;
-  top: 40px;
-  right: 16px;
-  color: #667085;
 }
 
 /* Bài tập 4 */
@@ -176,15 +170,25 @@ body {
   padding-bottom: 60px;
 }
 
-.baiTap5 .oNhapCoDonVi {
-  position: relative;
+/* Nút trở về đầu trang */
+.backToTop {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #5b46e5;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-.baiTap5 .oNhapCoDonVi span {
-  position: absolute;
-  top: 40px;
-  right: 16px;
-  color: #667085;
+.backToTop:hover {
+  background-color: #4634c7;
 }
 
 /* Màn hình điện thoại */
@@ -222,5 +226,10 @@ body {
   .baiTap4 .danhSachSoHCN label {
     width: 100%;
     margin-top: 14px;
+  }
+
+  .backToTop {
+    right: 15px;
+    bottom: 15px;
   }
 }
