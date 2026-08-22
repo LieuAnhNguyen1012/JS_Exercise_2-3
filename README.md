@@ -6,6 +6,7 @@ Chú thích:
 
 .toLocalString("vi-VN") chuyển đổi số thành chuỗi theo quốc gia 23000000 -> 23.000.000
 
+
 // TODO BÀI 1: TÍNH LƯƠNG
 // DOM: #txtSoNgayLam -> #btnTinhLuong -> #txtKetQuaBai1
 // Input: Số ngày làm

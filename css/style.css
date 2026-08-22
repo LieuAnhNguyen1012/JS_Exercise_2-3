@@ -135,6 +135,8 @@ body {
 }
 
 .baiTap .ketQua {
+  display: flex;
+  align-items: center;
   min-height: 54px;
   padding: 15px;
   margin: 14px 0 0;
