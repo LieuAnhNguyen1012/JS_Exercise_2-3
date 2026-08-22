@@ -73,9 +73,19 @@ function tinhTongHaiChuSo() {
 }
 
 // Nút trở về đầu trang
+var btnBackToTop = document.getElementById("btnBackToTop");
+
 document.getElementById("btnBackToTop").onclick = function () {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
+};
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 200) {
+    btnBackToTop.style.display = "block";
+  } else {
+    btnBackToTop.style.display = "none";
+  }
 };
