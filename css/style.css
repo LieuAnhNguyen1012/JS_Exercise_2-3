@@ -18,7 +18,7 @@ body {
 }
 
 /* Header */
-.header {
+.site-header {
   padding: 40px 0;
   color: white;
   text-align: center;
@@ -27,18 +27,18 @@ body {
 
 
 /* Phần chung của các bài tập */
-.baiTap {
+.exercise {
   padding-top: 25px;
 }
 
-.baiTap .baiTap__content {
+.exercise .exercise-content {
   padding: 30px;
   border-radius: 12px;
   background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.baiTap h2 {
+.exercise h2 {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -47,7 +47,7 @@ body {
   font-size: 26px;
 }
 
-.baiTap h2 span {
+.exercise h2 span {
   display: inline-block;
   padding: 10px 12px;
   border-radius: 8px;
@@ -56,19 +56,19 @@ body {
   background-color: #eeecff;
 }
 
-.baiTap .yeuCau {
+.exercise .exercise-instruction {
   margin: 22px 0;
   color: #58657b;
   line-height: 1.6;
 }
 
-.baiTap label {
+.exercise label {
   display: block;
   color: #374151;
   font-weight: bold;
 }
 
-.baiTap input {
+.exercise input {
   width: 100%;
   height: 50px;
   padding: 0 14px;
@@ -79,29 +79,29 @@ body {
   font-size: 17px;
 }
 
-.baiTap input:focus {
+.exercise input:focus {
   border-color: #5b46e5;
 }
 
 /* Ô nhập có đơn vị đi kèm */
-.baiTap .oNhapCoDonVi {
+.exercise .field-with-unit {
   position: relative;
   margin-top: 8px;
 }
 
-.baiTap .oNhapCoDonVi input {
+.exercise .field-with-unit input {
   padding-right: 80px;
   margin-top: 0;
 }
 
-.baiTap .oNhapCoDonVi span {
+.exercise .field-with-unit span {
   position: absolute;
   top: 15px;
   right: 16px;
   color: #667085;
 }
 
-.baiTap button {
+.exercise button {
   width: 100%;
   min-height: 52px;
   padding: 12px 18px;
@@ -115,11 +115,11 @@ body {
   background-color: #5b46e5;
 }
 
-.baiTap button:hover {
+.exercise button:hover {
   background-color: #4634c7;
 }
 
-.baiTap .ketQua {
+.exercise .result {
   display: flex;
   align-items: center;
   min-height: 54px;
@@ -133,32 +133,32 @@ body {
 }
 
 /* Bài tập 2 */
-.baiTap2 .danhSachSo {
+.exercise-average .number-list {
   display: flex;
   gap: 12px;
 }
 
-.baiTap2 .danhSachSo label {
+.exercise-average .number-list label {
   width: 20%;
 }
 
 /* Bài tập 4 */
-.baiTap4 .danhSachSoHCN {
+.exercise-rectangle .rectangle-inputs {
   display: flex;
   gap: 18px;
 }
 
-.baiTap4 .danhSachSoHCN label {
+.exercise-rectangle .rectangle-inputs label {
   width: 50%;
 }
 
 /* Bài tập 5 */
-.baiTap5 {
+.exercise-practice {
   padding-bottom: 60px;
 }
 
 /* Nút trở về đầu trang */
-.backToTop {
+.back-to-top {
   display: none;
   position: fixed;
   right: 25px;
@@ -175,7 +175,7 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-.backToTop:hover {
+.back-to-top:hover {
   background-color: #4634c7;
 }
 
@@ -185,38 +185,38 @@ body {
     font-size: 16px;
   }
 
-  .header {
+  .site-header {
     padding: 42px 0;
   }
 
-  .header .header__content h1 {
+  .site-header .site-site-header-content h1 {
     font-size: 30px;
   }
 
-  .header .header__content span {
+  .site-header .site-site-header-content span {
     font-size: 16px;
   }
 
-  .baiTap .baiTap__content {
+  .exercise .exercise-content {
     padding: 22px 18px;
   }
 
-  .baiTap h2 {
+  .exercise h2 {
     font-size: 21px;
   }
 
-  .baiTap2 .danhSachSo,
-  .baiTap4 .danhSachSoHCN {
+  .exercise-average .number-list,
+  .exercise-rectangle .rectangle-inputs {
     display: block;
   }
 
-  .baiTap2 .danhSachSo label,
-  .baiTap4 .danhSachSoHCN label {
+  .exercise-average .number-list label,
+  .exercise-rectangle .rectangle-inputs label {
     width: 100%;
     margin-top: 14px;
   }
 
-  .backToTop {
+  .back-to-top {
     right: 15px;
     bottom: 15px;
   }
